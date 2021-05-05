@@ -7,19 +7,19 @@ from matplotlib.pyplot import figure
 import sorting_algorithms
 
 
-def create_new_list(len_list, case="average"):
+def create_new_list(len_list, case='average'):
     """Depending on the chosen case,
     the function creates a specified list of elements"""
     new_list = []
 
-    if case == "best":
+    if case == 'best':
         new_list = list(range(0, len_list))
 
-    elif case == "worst":
+    elif case == 'worst':
         new_list = list(range(0, len_list))
         new_list.reverse()
 
-    elif case == "average":
+    elif case == 'average':
         for _ in range(0, len_list):
             new_list.append(random.randint(-10000, 10000))
 
@@ -102,11 +102,11 @@ def compare_algorithms(len_list, case, algo1, algo2):
     plt.plot(xy1[0], xy1[1], linewidth=1.0, label=algo1)
     plt.plot(xy2[0], xy2[1], linewidth=1.0, label=algo2)
 
-    plt.title(case+" case")
+    plt.title(case+' case')
     plt.xlabel('number of elements in a list')
     plt.ylabel('time')
     plt.grid(True)
-    plt.legend(prop={"size": 10})
+    plt.legend(prop={'size': 10})
     plt.show()
     
     
