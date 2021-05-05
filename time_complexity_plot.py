@@ -45,7 +45,6 @@ def generate_axis(new_list, algorithm):
 
         x.append(i)
         y.append(time_sum / len(new_list))
-
     return x, y
 
 
